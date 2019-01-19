@@ -20,5 +20,5 @@ public class Routine {
         maxMins = this.maxMins;
     }
 
-
+    
 }
