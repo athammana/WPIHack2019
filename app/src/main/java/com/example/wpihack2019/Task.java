@@ -6,10 +6,10 @@ public class Task {
     String Name;
     int priority;
     int order;
-    int minMins;
-    int maxMins;
+    double minMins;
+    double maxMins;
 
-    public Task(int id, String Name, int priority, int order, int minMins, int maxMins){
+    public Task(int id, String Name, int priority, int order, double minMins, double maxMins){
         this._id = id;
         this.Name = Name;
         this.priority = priority;
@@ -34,11 +34,11 @@ public class Task {
         return order;
     }
 
-    public int getMinMins() {
+    public double getMinMins() {
         return minMins;
     }
 
-    public int getMaxMins() {
+    public double getMaxMins() {
         return maxMins;
     }
 
@@ -54,11 +54,11 @@ public class Task {
         this.order = order;
     }
 
-    public void setMinMins(int minMins) {
+    public void setMinMins(double minMins) {
         this.minMins = minMins;
     }
 
-    public void setMaxMins(int maxMins) {
+    public void setMaxMins(double maxMins) {
         this.maxMins = maxMins;
     }
 }

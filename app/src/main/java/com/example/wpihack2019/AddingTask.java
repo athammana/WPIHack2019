@@ -12,12 +12,15 @@ import android.widget.TextView;
 
 public class AddingTask extends AppCompatActivity {
 
+    TaskDBHandler taskDB;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adding_task);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        taskDB = new TaskDBHandler(this, null, null, 1);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -42,9 +45,13 @@ public class AddingTask extends AppCompatActivity {
                 double minTime = Double.parseDouble(taskMinTime.getText().toString());
                 double maxTime = Double.parseDouble(taskMaxTime.getText().toString());
                 int priority = Integer.parseInt(taskPriority.getText().toString());
-                resultText.setText(minTime + "," + maxTime + "," + priority + "," + name);
+                Task task = new Task(0, name, priority, 0, minTime, maxTime);
+                taskDB.addTask(task);
+//                resultText.setText(minTime + "," + maxTime + "," + priority + "," + name);
+
             }
         });
-    }
 
+    }
 }
+
