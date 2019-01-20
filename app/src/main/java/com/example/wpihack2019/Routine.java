@@ -2,6 +2,7 @@ package com.example.wpihack2019;
 
 public class Routine {
 
+    private int _id;
     String Name;
     int priority;
     int order;
@@ -10,14 +11,15 @@ public class Routine {
     int maxHours;
     int maxMins;
 
-    public Routine(String Name, int priority, int order, int minHours, int minMins, int maxHours, int maxMins){
-        Name = this.Name;
-        priority = this.priority;
-        order = this.order;
-        minHours = this.minHours;
-        minMins = this.minMins;
-        maxHours = this.maxHours;
-        maxMins = this.maxMins;
+    public Routine(int id, String Name, int priority, int order, int minHours, int minMins, int maxHours, int maxMins){
+        this._id = id;
+        this.Name = Name;
+        this.priority = priority;
+        this.order = order;
+        this.minHours = minHours;
+        this.minMins = minMins;
+        this.maxHours = maxHours;
+        this.maxMins = maxMins;
     }
 
     
