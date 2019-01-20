@@ -3,4 +3,5 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_routine_list">routineList</string>
     <string name="title_activity_adding_task">AddingTask</string>
+    <string name="title_activity_task_list">taskList</string>
 </resources>
