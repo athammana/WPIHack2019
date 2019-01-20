@@ -36,6 +36,7 @@ public class TaskDBHandler extends SQLiteOpenHelper {
         db.execSQL(query);
     }
 
+    //
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {}
 
